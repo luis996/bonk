@@ -6,7 +6,7 @@ module.exports = (client, instance) => {
   
       // Get the channel named "welcome"
       const channel = guild.channels.cache.find(
-        (channel) => channel.name === "bonk-welcome-9N"
+        (channel) => channel.name === "bonk-welcome-9n"
       )
       
       // Ensure this channel exists
