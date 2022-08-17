@@ -1,7 +1,7 @@
 const { ICommand } = require('wokcommands');
 module.exports = {
   category: 'Utility',
-  description: '',
+  description: 'Sets up the welcome for bonk bot',
   slash: true,
   testOnly: true,
 
