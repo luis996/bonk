@@ -9,7 +9,7 @@ const helpEmbed = new EmbedBuilder()
 		{ name: '/ping', value: 'Replies with Pong!', inline: true },
 		{ name: '/clear <Argument>', value: 'Removes messages', inline: true },
 	)
-  .addFields({name: 'NONE', value: 'NONE', inline: true})
+  .addFields({name: '/welcomechannel', value: 'set-ups a welcome channel and tells you the name to create it', inline: true})
 module.exports = {
   category: 'Helping',
   description: 'Get all the commands',
