@@ -17,7 +17,7 @@ module.exports = {
       return 'Crasheo del nucleo del bot detectado, cancelando accion. **Esto se puede deber a que el numero es mayor que 99 o menor que 1**';
     }
 
-    if (amount === 0) {
+    if (amount < 1) {
       return 'Crasheo del nucleo del bot detectado, cancelando accion. **Esto se puede deber a que el numero es mayor que 99 o menor que 1**';
     }
 
