@@ -1,6 +1,6 @@
 const { ICommand } = require('wokcommands');
 module.exports = {
-  category: 'Moderation',
+  category: 'Utility',
   description: 'Deletes specified number of messages',
 
   permissions: ['ADMINISTRATOR'],
