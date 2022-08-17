@@ -34,6 +34,7 @@ client.on("ready", () => {
    })
    presence();
 });
+// Im working on better code, sorry if you dont like this piece of shi... Old code.
 client.on("messageCreate", (message) => {
   if (message.content.startsWith("bonk!ping")) try {
     let user = message.mentions.users.first();
