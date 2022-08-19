@@ -26,12 +26,16 @@ function presence() {
 }
 client.on("ready", () => {
    console.log("bot cargado");
+   const dbOptions = {
+    keepAlive: true
+   }
 
    new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
     featuresDir: path.join(__dirname, 'features'),
     testServers: '1009243706538348544',
-    mongoUri: process.env.MONGO_URI
+    dbOptions,
+    mongoUri: MONGO_URI,
    })
    presence();
 });
