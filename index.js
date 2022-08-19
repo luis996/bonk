@@ -31,6 +31,7 @@ client.on("ready", () => {
     commandsDir: path.join(__dirname, 'commands'),
     featuresDir: path.join(__dirname, 'features'),
     testServers: '1009243706538348544',
+    mongoUri: process.env.MONGO_URI
    })
    presence();
 });
