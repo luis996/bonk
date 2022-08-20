@@ -1,0 +1,20 @@
+{
+  "name": "bonk4",
+  "version": "1.0.0",
+  "description": "Hi! Im a discord bot called Bonk,\r you can invite me [here](https://discord.com/api/oauth2/authorize?client_id=904178892787560489&permissions=8&scope=bot%20applications.commands)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luis996/bonk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luis996/bonk/issues"
+  },
+  "homepage": "https://github.com/luis996/bonk#readme"
+}
