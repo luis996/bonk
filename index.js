@@ -15,6 +15,7 @@ const { Intents } = require("discord.js");
 const WOKCommands = require("wokcommands");
 const path = require("path");
 const dotenv = require("dotenv");
+const mongoose = require('mongoose');
 dotenv.config()
 
 const client = new DiscordJS.Client({
@@ -24,18 +25,18 @@ const client = new DiscordJS.Client({
 function presence() {
   client.user.setPresence({ activities: [{ name: 'bonk!help' }] });
 }
-client.on("ready", () => {
+client.on("ready", async () => {
    console.log("bot cargado");
-   const dbOptions = {
-    keepAlive: true
-   }
-
+   await mongoose.connect(
+    process.env.MONGO_URI,
+    {
+      keepAlive: true
+    }
+   )
    new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
     featuresDir: path.join(__dirname, 'features'),
     testServers: '1009243706538348544',
-    dbOptions,
-    mongoUri: MONGO_URI,
    })
    presence();
 });
