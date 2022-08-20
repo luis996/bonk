@@ -9,6 +9,8 @@ const client = new DiscordJS.Client({
 })
 
 client.on('ready', () => {
+  console.log(process.env.token)
+  console.log(process.env.MONGO_URI)
   new WOKCommands(client, {
     commandsDir: path.join(__dirname, 'commands'),
     testServers: ['1009243706538348544'],
