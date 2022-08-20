@@ -10,5 +10,6 @@ export default {
             content: 'Pong!',
             ephemeral: false,
         })
+        console.log('input: SLASH /ping. output: Pong! non-ephemeral')
     }
 } as ICommand
