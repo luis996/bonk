@@ -16,7 +16,7 @@ client.on('messageCreate', (message) => {
   if (message.content === 'ping') {
     console.log('input: ping, output: pong')
     message.reply({
-      content: '',
+      content: 'pong',
     })
   }
 })
