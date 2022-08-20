@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/luis996/bonk/issues"
   },
-  "homepage": "https://github.com/luis996/bonk#readme"
+  "homepage": "https://github.com/luis996/bonk#readme",
+  "dependencies": {
+    "discord.js": "^14.2.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
 }
