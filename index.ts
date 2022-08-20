@@ -1,4 +1,6 @@
 import DiscordJS from 'discord.js'
+import WOKCommands from 'wokcommands'
+import path from 'path'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -7,9 +9,10 @@ const client = new DiscordJS.Client({
 })
 
 client.on('ready', () => {
-  console.log('Sending debug info')
-  console.log(process.env.token)
-  console.log(process.env.MONGO_URI)
+  new WOKCommands(client, {
+    commandsDir: path.join(__dirname, 'commands'),
+    typeScript: true
+  })
 })
 
 client.on('messageCreate', (message) => {
