@@ -1,10 +1,10 @@
 {
   "name": "bonk4",
   "version": "1.0.0",
-  "description": "Hi! Im a discord bot called Bonk,\r you can invite me [here](https://discord.com/api/oauth2/authorize?client_id=904178892787560489&permissions=8&scope=bot%20applications.commands)",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node index.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/luis996/bonk#readme",
   "dependencies": {
-    "discord.js": "^13.10.2",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "wokcommands": "^1.5.3"
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.1"
   }
 }
