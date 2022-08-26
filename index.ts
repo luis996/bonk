@@ -1,4 +1,4 @@
-import DiscordJS from 'discord.js'
+import DiscordJS, { BaseGuildTextChannel, InteractionResponse, TextChannel } from 'discord.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -19,19 +19,32 @@ client.on('ready', () => {
         commands = client.application?.commands
     }
     commands?.create({
-        name:'ping',
+        name: 'ping',
         description: 'Replies with pong',
+    })
+    commands?.create({
+        name: 'clear',
+        description: 'Deletes messages',
     })
 })
 client.on('interactionCreate', async (interaction) => {
     if (!interaction.isCommand()) {
         return
     }
-    const { commandName, options, } = interaction
+    const { commandName, options } = interaction
     if (commandName === 'ping') {
         interaction.reply({
             content: 'Pong!',
         })
+    } else if (commandName === 'clear') {
+        interaction.reply({
+            content: '> invoke bonkcore clear ${quantity}',
+        })
+    }
+})
+client.on('messageCreate', (message) => {
+    if (message.content.startsWith('> invoke bonkcore clear')) {
+        message.channel.send('Error en la api interna! bonk_core {clear} no esta definido')
     }
 })
 client.login(process.env.token)
